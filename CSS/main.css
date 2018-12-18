@@ -1,0 +1,83 @@
+body{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(medi1.jpg);
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	height: 100vh;
+	}
+
+h1 {
+	font-size:50;
+	color:brown;
+	text-shadow: 3px 3px 10px orange,
+				6px 6px 10px blue;
+	
+	}
+	
+#content ul{
+	list-style:none;
+	margin-left:600px;
+	margin-top:-50px;
+	}
+	
+#content ul ul{
+	display:none;
+	}
+
+#content ul li:hover >ul{
+	display: block;
+	}
+
+#content ul li{
+	background-color:transparent;
+	width:150px;
+	height:40px;
+	line-height:50 px;
+	text-align:center;
+	float:left;
+	color:pink;
+	font-size:20px;
+	margin-left:5px;
+	
+	}
+	
+#content ul li ul{
+	margin-left:-46px;
+	margin-top:30px;
+	}
+	
+#content ul li:hover{
+	background-color:brown;
+	border-bottom:2px solid white;
+	}
+
+button{
+	display:inline-block;
+	padding:10px 30px;
+	font-weight:lighter;
+	text-decoration: none;
+	text-transform: none;
+	border-radius:200 px;
+	transition: background-color 0.4s,border 0.4s, color 0.4;
+	background-color: transparent;
+	color: pink;
+	border:1px solid white;
+	margin-top:450px;
+	}
+	
+button:hover{
+	background-color:brown;
+	}
+
+h1{
+	animation: colorchange1 2s infinite;
+}
+
+@keyframes colorchange1{
+	0%{color:blue;}
+	25%{color:green;}
+	50%{color:pink;}
+	100%{color:red;}
+	}
+
+	
