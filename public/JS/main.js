@@ -1,10 +1,10 @@
-function changePage(){
-	 window.location="form.html";
-	}
-	
-var todayDate = new Date();
+function changePage() {
+    window.location="form.html";
+}
 
-var useString = todayDate.toDateString();
+let todayDate = new Date();
+
+let useString = todayDate.toDateString();
 
 document.write(useString);
 
