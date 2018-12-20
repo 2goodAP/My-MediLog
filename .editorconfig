@@ -1,0 +1,15 @@
+# This is the root directory
+root = true
+
+# Settings for all file types
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# 2 space indentation for HTML, CSS and JavaScript
+[*.{html, css, js, ejs, json}]
+indent_style = tab
+indent_size = 2
+
