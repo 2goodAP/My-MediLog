@@ -1,5 +1,5 @@
 function changePage(){
-	 window.location="project1.html";
+	 window.location="form.html";
 	}
 	
 var todayDate = new Date();
