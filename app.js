@@ -5,7 +5,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-    extended:true
+  extended:true
 }));
 
 app.set("view-engine","ejs");
@@ -26,9 +26,9 @@ app.use("/pharmacy",indexRoutes);
 app.use("/pharmacyLogin",indexRoutes);
 
 app.use("/awa",function(req,res){
-    res.render("patient/ppp.ejs");
+  res.render("patient/ppp.ejs");
 })
 
 app.listen(3000, ()=> {
-    console.log("Server listening at 3000");
+  console.log("Server listening at 3000");
 })
