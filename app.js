@@ -18,6 +18,7 @@ app.set("views", [path.join(__dirname, "views")],
 const indexRoutes = require("./routes/index");
 app.use("/",indexRoutes);
 app.use("/patient",indexRoutes);
+app.use("/patientSignup",indexRoutes);
 app.use("/patientLogin",indexRoutes);
 app.use("/hospital",indexRoutes);
 app.use("/hospitalLogin",indexRoutes);
