@@ -1,5 +1,5 @@
 body{
-	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(medi1.jpg);
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/medi1.jpg);
 	background-size: cover;
 	background-repeat:no-repeat;
 	background-position:center;
@@ -24,7 +24,7 @@ h1 {
 	display:none;
 	}
 
-#content ul li:hover >ul{
+#content ul li:hover>ul{
 	display: block;
 	}
 
@@ -38,6 +38,7 @@ h1 {
 	color:pink;
 	font-size:20px;
 	margin-left:5px;
+	margin-top:5px;
 	
 	}
 	

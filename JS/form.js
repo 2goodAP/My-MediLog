@@ -1,12 +1,13 @@
 function validateTextbox() {
  
-	var box = document.getElementById("name");
-	var box1 =document.getElementById("address");
-	var box2=document.getElementById("phone");
-	var box3=document.getElementById("email");
-	var box4=document.getElementById("password");
+	let box = document.getElementById("name");
+	let box1 =document.getElementById("age");
+	let box2=document.getElementById("sex");
+	let box3=document.getElementById("address");
+	let box4=document.getElementById("phone");
+	let box5=document.getElementById("email");
 
-	if(box.value=="" || box1.value=="" || box2.value=="" || box3.value=="" ||box4.value==""){
+	if(box.value=="" || box1.value=="" || box2.value=="" || box3.value=="" ||box4.value==""|| box5.value=""){
 		alert("The field marked '*' should be filled");
 		if (box.value==""){
 		box.focus();
@@ -28,14 +29,23 @@ function validateTextbox() {
 		box3.style.border="solid 3px red";
 		}
  
-		else{
+		else if(box4.value==""){
 		box4.focus();
 		box4.style.border="solid 3px red";
+		
+		else 
+			box5.focus();
+			box5.style.border="solid 3px red";
 		}
 	}
  
 	return false;
  }
+ 
+
+	 
+ 
+ 
 
 
 

@@ -5,6 +5,10 @@ exports.indexPage = function(req,res){
 exports.patientLogin = function(req,res){
     res.render("./patient/login.ejs");
 }
+
+exports.patientSignup = function(req,res){
+    res.render("./patient/signup.ejs");
+}
 exports.patient = function(req,res){
     res.render("./patient/patient.ejs");
 }
