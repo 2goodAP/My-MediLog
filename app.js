@@ -13,7 +13,7 @@ app.set("views", [path.join(__dirname, "views")],
                  [path.join(__dirname, "views/patient")],
                  [path.join(__dirname, "views/hospital")],
                  [path.join(__dirname, "views/pharmacy")],
-                    );
+);
 
 const indexRoutes = require("./routes/index");
 app.use("/",indexRoutes);
@@ -24,6 +24,9 @@ app.use("/hospital",indexRoutes);
 app.use("/hospitalLogin",indexRoutes);
 app.use("/pharmacy",indexRoutes);
 app.use("/pharmacyLogin",indexRoutes);
+
+// For linking external static stylesheets and JavaScript files
+app.use(express.static(__dirname + "/public"));
 
 app.use("/awa",function(req,res){
   res.render("patient/ppp.ejs");
