@@ -1,47 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Medilog Hospital</title>
-	<link rel="stylesheet" href="public/CSS/main.css">
-	<script src="public/JS/main.js"> </script>
+	<link rel="stylesheet" href="public/css/main.css">
+	<script src="public/js/main.js"> </script>
 </head>
 <body>
-<<<<<<< HEAD
-	<h1> MY MEDILOG </h1> <hr> <hr>
-	</br>
-	<br>
-	<div id="content">
-	<ul>
-		<li>Home</li>
-		<li>About</li>
-		<li>Services
-			<ul>
-				<li>Emergency </li>
-				<li>X-ray</li>
-				<li>Cardiology</li>
-				<li>Ear nose and throat(ENT)</li>
-				<li>Microbiology</li>
-=======
-	<header>
-		<h1>MediLog Hospital</h1>
+	<header class="page-header">
+		<h1 class="page-header__logo">MediLog Hospital</h1>
+		<div class="page-header__login">
+			<button onclick="changePage()" class="login-button">Login</button>
+		</div>
 		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Services</a>
-					<ul>
-						<li><a href="#">Emergency</a></li>
-						<li><a href="#">X-ray</a></li>
-						<li><a href="#">Cardiology</a></li>
+			<ul class="navigation">
+				<li><a href="#" class="navigation__link">Home</a></li>
+				<li class="navigation__dropbtn"><a href="#" navigation__dropbtn">Services</a>
+					<ul class="navigation__dropdown">
+						<li><a href="#" class="navigation__dropdown__link">Emergency</a></li>
+						<li><a href="#" class="navigation__dropdown__link">X-ray</a></li>
+						<li><a href="#" class="navigation__dropdown__link">Cardiology</a></li>
 					</ul>
 				</li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
->>>>>>> master
+				<li><a href="#" class="navigation__link">About</a></li>
+				<li><a href="#" class="navigation__link" >Contact</a></li>
 			</ul>
-		<nav>
-		<button onclick="changePage()" class="login-button">Form Section</button>
+		</nav>
 	</header>
+	<div class="page-container">
+		<section class="page-container__main-content">
+			<section class="slideshow">
+				<h2>Slideshow</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim porta ullamcorper.
+				Vestibulum dictum porta ipsum, non ullamcorper enim vehicula quis.
+				Phasellus at euismod felis. Proin sed nulla condimentum,
+				sagittis augue sit amet, mollis augue. Suspendisse non ante sit amet
+				quam volutpat feugiat in ac elit. Suspendisse ultrices tortor at massa
+				cursus, quis pretium sapien mollis. Suspendisse massa tellus,
+				pretium vitae rutrum eu, fermentum quis est. Praesent commodo ante quis turpis eleifend,
+				in mattis justo elementum. Nam maximus tellus odio, eget convallis tortor dictum a.
+				Sed ac justo in eros dignissim semper. Sed vel ante erat. Nunc pellentesque nec massa ut euismod.</p>
+			</section>
+			<section class="page-container__services">
+				<h2>Services</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim porta ullamcorper.
+				Vestibulum dictum porta ipsum, non ullamcorper enim vehicula quis.
+				Phasellus at euismod felis. Proin sed nulla condimentum,
+				sagittis augue sit amet, mollis augue. Suspendisse non ante sit amet
+				quam volutpat feugiat in ac elit. Suspendisse ultrices tortor at massa
+				cursus, quis pretium sapien mollis. Suspendisse massa tellus,
+				pretium vitae rutrum eu, fermentum quis est. Praesent commodo ante quis turpis eleifend,
+				in mattis justo elementum. Nam maximus tellus odio, eget convallis tortor dictum a.
+				Sed ac justo in eros dignissim semper. Sed vel ante erat. Nunc pellentesque nec massa ut euismod.</p>
+			</section>
+		</section>
+		<section class="news-updates">
+			<h1>News and Updates</h1>
+			<section class="news-updates__news">
+				<h2>News 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim porta ullamcorper.
+				Vestibulum dictum porta ipsum, non ullamcorper enim vehicula quis.
+				Phasellus at euismod felis. Proin sed nulla condimentum,
+				sagittis augue sit amet, mollis augue. Suspendisse non ante sit amet
+				quam volutpat feugiat in ac elit. Suspendisse ultrices tortor at massa
+				cursus, quis pretium sapien mollis. Suspendisse massa tellus,
+				pretium vitae rutrum eu, fermentum quis est. Praesent commodo ante quis turpis eleifend,
+				in mattis justo elementum. Nam maximus tellus odio, eget convallis tortor dictum a.
+				Sed ac justo in eros dignissim semper. Sed vel ante erat. Nunc pellentesque nec massa ut euismod.</p>
+			</section>
+			<section class="news-updates__news">
+				<h2>News 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim porta ullamcorper.
+				Vestibulum dictum porta ipsum, non ullamcorper enim vehicula quis.
+				Phasellus at euismod felis. Proin sed nulla condimentum,
+				sagittis augue sit amet, mollis augue. Suspendisse non ante sit amet
+				quam volutpat feugiat in ac elit. Suspendisse ultrices tortor at massa
+				cursus, quis pretium sapien mollis. Suspendisse massa tellus,
+				pretium vitae rutrum eu, fermentum quis est. Praesent commodo ante quis turpis eleifend,
+				in mattis justo elementum. Nam maximus tellus odio, eget convallis tortor dictum a.
+				Sed ac justo in eros dignissim semper. Sed vel ante erat. Nunc pellentesque nec massa ut euismod.</p>
+			</section>
+			<section class="news-updates__news">
+				<h2>News 3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim porta ullamcorper.
+				Vestibulum dictum porta ipsum, non ullamcorper enim vehicula quis.
+				Phasellus at euismod felis. Proin sed nulla condimentum,
+				sagittis augue sit amet, mollis augue. Suspendisse non ante sit amet
+				quam volutpat feugiat in ac elit. Suspendisse ultrices tortor at massa
+				cursus, quis pretium sapien mollis. Suspendisse massa tellus,
+				pretium vitae rutrum eu, fermentum quis est. Praesent commodo ante quis turpis eleifend,
+				in mattis justo elementum. Nam maximus tellus odio, eget convallis tortor dictum a.
+				Sed ac justo in eros dignissim semper. Sed vel ante erat. Nunc pellentesque nec massa ut euismod.</p>
+			</section>
+		</section>
+	</div>
+	<footer class="page-footer">
+		<div class="page-footer__about">
+			About
+		</div>
+		<div class="page-footer__copyright">
+			Copyright
+		</div>
+		<div class="page-footer__social">
+			Social
+		</div>
+	</footer>
 </body>
 </html>

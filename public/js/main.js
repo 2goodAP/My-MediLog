@@ -6,5 +6,5 @@ let todayDate = new Date();
 
 let useString = todayDate.toDateString();
 
-document.write(useString);
+//document.write(useString);
 

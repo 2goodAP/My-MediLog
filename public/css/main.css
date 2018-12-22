@@ -1,32 +1,82 @@
 body {
-	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/medi1.jpg);
+	margin: 0;
+	background-color: white;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	color: #3a3869;
+	/*background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/medi1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 100px;
+	height: 100px;*/
 }
-
-h1  {
+.page-header {
+	width: 100%;
+	overflow: hidden;
+	background-color: rgb(28, 39, 54);
+	color: #ffffff;
+}
+.page-header__logo {
+	float: left;
+}
+/* Navigation styling */
+.navigation {
+	list-style-type: none;
+	text-align: right;
+	padding-right: 15%;
+}
+.navigation ul {
+	list-style-type: none;
+}
+.navigation>li {
+	float: left;
+	position: relative;
+	margin-right: 10px;
+	line-height: 45px;
+}
+.navigation__link, .navigation__dropbtn, .navigation__dropdown__link {
+	padding: 0 15px;
+	display: block;
+	border-radius: 40px;
+	color: #ffffff;
+	text-decoration: none;
+}
+.navigation__dropdown {
+	display: none;
+	position: absolute;
+	left: 0;
+	padding-right: 20px;
+	background-color: #3f5666;
+}
+.navigation__link:hover, .navigation__dropbtn:hover {
+	background-color: #3f5666;
+}
+.navigation__dropbtn:hover .navigation__dropdown {
+	display: block;
+}
+/* Login and signup button styling */
+.page-header__login {
+	float: right;
+	padding: 20px 20px 0 0;
+}
+/*h1  {
 	color: brown;
 	animation: colorchange1 2s infinite;
 	text-shadow: 3px 3px 10px orange,
 				6px 6px 10px blue;
 }
-
 nav ul {
 	list-style: none;
 	margin-left: 600px;
 	margin-top: -50px;
 }
-
 nav ul ul {
 	display: none;
 }
-
 nav ul li:hover >ul {
 	display: block;
 }
-
 nav ul li {
 	background-color: transparent;
 	width: 150px;
@@ -43,12 +93,10 @@ nav ul li ul {
 	margin-left:-46px;
 	margin-top: 30px;
 }
-
 nav ul li:hover {
 	background-color: brown;
 	border-bottom: 2px solid white;
 }
-
 .login-button {
 	display: inline-block;
 	padding: 10px 30px;
@@ -62,14 +110,12 @@ nav ul li:hover {
 	margin-top: 1%;
 	margin-left: 89%;
 }
-
 .login-button:hover {
 	background-color: brown;
 }
-
 @keyframes colorchange1 {
 	0% {color: blue;}
 	25% {color: green;}
 	50% {color: pink;}
 	100% {color: red;}
-}
+}*/
