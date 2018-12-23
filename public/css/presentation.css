@@ -73,3 +73,20 @@ body {
 	float: right;
 	padding: 20px 20px 0 0;
 }
+/* Page footer styling */
+.page-footer {
+	height: 70px;
+	background-color: #242729;
+	color: #bbc0c4;
+}
+.page-footer__housekeeping { list-style-type: none; }
+.page-footer a {
+	display: block;
+	margin: 10px;
+	color: #bbc0c4;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+}
+.page-footer a:hover { color: #f2f3f3; }

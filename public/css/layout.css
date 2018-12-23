@@ -1,0 +1,33 @@
+.page-container__news-updates {
+	float: right;
+	width: 25%;
+	max-width: 30%;
+	min-width: 20%;
+	overflow: scroll;
+	margin: auto 1%;
+	padding: 20px;
+}
+.page-container__news-updates__news {
+	overflow: scroll;
+	padding: 10px;
+	height: 90px;
+	min-height: 50px;
+	max-height: 120px;
+}
+.page-container__main-content {
+	width: 66%;
+	max-width: 66%;
+	min-width: 50%;
+	margin: 1%;
+	padding: 1%;
+}
+.page-footer {
+	clear: both;
+	margin-bottom: 0;
+}
+.page-footer__about {
+	float: left;
+}
+.page-footer__social {
+	float: right;
+}
