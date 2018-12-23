@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	padding: 0;
 	background-color: white;
 	font-size: 16px;
 	font-weight: normal;
@@ -13,30 +14,30 @@ body {
 }
 .page-header {
 	width: 100%;
-	overflow: hidden;
+	height: 70px;
 	background-color: rgb(28, 39, 54);
 	color: #ffffff;
 }
 .page-header__logo {
 	float: left;
+	padding-left: 1%;
+	margin-top: 15px;
 }
 /* Navigation styling */
 .navigation {
+	margin: 0;
+	padding: 0;
 	list-style-type: none;
-	text-align: right;
-	padding-right: 15%;
 }
 .navigation ul {
-	list-style-type: none;
 }
 .navigation>li {
 	float: left;
 	position: relative;
-	margin-right: 10px;
-	line-height: 45px;
+	margin: 18px 10px 0 0;
 }
-.navigation__link, .navigation__dropbtn, .navigation__dropdown__link {
-	padding: 0 15px;
+.navigation__link, .navigation__dropdown__link {
+	padding: 7px 15px;
 	display: block;
 	border-radius: 40px;
 	color: #ffffff;
@@ -46,76 +47,29 @@ body {
 	display: none;
 	position: absolute;
 	left: 0;
-	padding-right: 20px;
-	background-color: #3f5666;
+	padding: 0;
+	min-width: 200px;
+	text-align: center;
+	list-style-type: none;
+	background-color: rgb(28, 39, 54)/*#3f5666*/;
+	border-radius: 0 10px 10px 10px;
+	box-shadow: 0 2px 8px #222;
 }
 .navigation__link:hover, .navigation__dropbtn:hover {
 	background-color: #3f5666;
 }
+.navigation__dropbtn:hover {
+	border-radius: 20px 20px 0 0;
+}
+.navigation__dropdown>li:hover {
+	background-color: #3f5666;
+}
 .navigation__dropbtn:hover .navigation__dropdown {
 	display: block;
+	z-index: 1;
 }
 /* Login and signup button styling */
 .page-header__login {
 	float: right;
 	padding: 20px 20px 0 0;
 }
-/*h1  {
-	color: brown;
-	animation: colorchange1 2s infinite;
-	text-shadow: 3px 3px 10px orange,
-				6px 6px 10px blue;
-}
-nav ul {
-	list-style: none;
-	margin-left: 600px;
-	margin-top: -50px;
-}
-nav ul ul {
-	display: none;
-}
-nav ul li:hover >ul {
-	display: block;
-}
-nav ul li {
-	background-color: transparent;
-	width: 150px;
-	height: 40px;
-	line-height: 50px;
-	text-align: center;
-	float: left;
-	color: pink;
-	font-size: 20px;
-	margin-left: 5px;
-}
-
-nav ul li ul {
-	margin-left:-46px;
-	margin-top: 30px;
-}
-nav ul li:hover {
-	background-color: brown;
-	border-bottom: 2px solid white;
-}
-.login-button {
-	display: inline-block;
-	padding: 10px 30px;
-	font-weight: normal;
-	text-decoration: none;
-	border-radius: 200px;
-	transition: background-color 0.4s,border 0.4s, color 0.4;
-	background-color: #32302f;
-	color: pink;
-	border: none;
-	margin-top: 1%;
-	margin-left: 89%;
-}
-.login-button:hover {
-	background-color: brown;
-}
-@keyframes colorchange1 {
-	0% {color: blue;}
-	25% {color: green;}
-	50% {color: pink;}
-	100% {color: red;}
-}*/
