@@ -73,9 +73,10 @@ body {
 	float: right;
 	padding: 20px 20px 0 0;
 }
+/* News and Updates */
+.page-container__news-updates__news { border-bottom: 2px solid #e1e4e8; }
 /* Page footer styling */
 .page-footer {
-	height: 70px;
 	background-color: #242729;
 	color: #bbc0c4;
 }
