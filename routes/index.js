@@ -2,6 +2,7 @@ const router = require("express").Router();
 const indexController = require("../indexcontroller/indexcontroller");
 
 router.get("/",indexController.indexPage)
+router.get("/medilogIndex", indexController.medilogIndex);
 router.get("/patientLogin",indexController.patientLogin)
 router.get("/patientSignup",indexController.patientSignup)
 router.get("/patient",indexController.patient)

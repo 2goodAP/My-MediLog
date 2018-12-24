@@ -1,53 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
-	<link rel="stylesheet" href="css/medilog_index.css">
-	<title>Webpage </title>
+	<title>Medilog Hospital</title>
+	<link rel="stylesheet" href="css/presentation.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="js/main.js"> </script>
 </head>
 <body>
-	<header>
-		<a href="index.html" class="header-part">MEDILOG</a>
+	<header class="page-header">
+		<h1 class="page-header__logo">MediLog Hospital</h1>
+		<div class="page-header__login">
+			<a href="/medilogIndex" class="page-header__login__login-btn">Go to MediLog</a>
+		</div>
 		<nav>
-			<ul>
-					<li><a href="indeex.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="faq.html">FAQs</a></li>
+			<ul class="navigation">
+				<li><a href="#" class="navigation__link">Home</a></li>
+				<li class="navigation__dropbtn"><a href="#" class="navigation__link">Services</a>
+					<ul class="navigation__dropdown">
+						<li><a href="#" class="navigation__dropdown__link">Emergency</a></li>
+						<li><a href="#" class="navigation__dropdown__link">X-ray</a></li>
+						<li><a href="#" class="navigation__dropdown__link">Cardiology</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="navigation__link">About</a></li>
+				<li><a href="#" class="navigation__link" >Contact</a></li>
 			</ul>
 		</nav>
 	</header>
-	<main>
-		<section class="index-banner">
-			<div class="center">
-				<h2> This is the website  </h2>
-				<h1> hello enjoy being here</h1>
-			</div>
-		</section>
-		<div class="wrapper">
-			<section class="index-link">
-				<div class="boxlink-square">
-					<a href="/patientLogin"> <h3>Patient Login</h3></a>
-				</div>
-				<div class="boxlink-square">
-					<a href="/hospitalLogin">	<h3>Hospital Login</h3></a>
-				</div>
-				<div class="boxlink-square">
-					<a href="/pharmacyLogin">	<h3>Pharmacy Login</h3></a>
-				</div>
-				<div class="boxlink-square">
-					<a href="/patientSignup"><h3>Patient SignUp</h3></a>
-				</div>
+	<main class="page-container">
+		<section class="page-container__news-updates">
+			<h1>News and Updates</h1>
+			<section class="page-container__news-updates__news">
+				<h2>News 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim porta ullamcorper.
+				Vestibulum dictum porta ipsum, non ullamcorper enim vehicula quis.
+				Phasellus at euismod felis. Proin sed nulla condimentum,
+				sagittis augue sit amet, mollis augue. Suspendisse non ante sit amet
+				quam volutpat feugiat in ac elit. Suspendisse ultrices tortor at massa
+				cursus, quis pretium sapien mollis. Suspendisse massa tellus,
+				pretium vitae rutrum eu, fermentum quis est. Praesent commodo ante quis turpis eleifend,
+				in mattis justo elementum. Nam maximus tellus odio, eget convallis tortor dictum a.
+				Sed ac justo in eros dignissim semper. Sed vel ante erat. Nunc pellentesque nec massa ut euismod.</p>
 			</section>
+			<section class="page-container__news-updates__news">
+				<h2>News 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim porta ullamcorper.
+				Vestibulum dictum porta ipsum, non ullamcorper enim vehicula quis.
+				Phasellus at euismod felis. Proin sed nulla condimentum,
+				sagittis augue sit amet, mollis augue. Suspendisse non ante sit amet
+				quam volutpat feugiat in ac elit. Suspendisse ultrices tortor at massa
+				cursus, quis pretium sapien mollis. Suspendisse massa tellus,
+				pretium vitae rutrum eu, fermentum quis est. Praesent commodo ante quis turpis eleifend,
+				in mattis justo elementum. Nam maximus tellus odio, eget convallis tortor dictum a.
+				Sed ac justo in eros dignissim semper. Sed vel ante erat. Nunc pellentesque nec massa ut euismod.</p>
+			</section>
+			<section class="page-container__news-updates__news">
+				<h2>News 3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim porta ullamcorper.
+				Vestibulum dictum porta ipsum, non ullamcorper enim vehicula quis.
+				Phasellus at euismod felis. Proin sed nulla condimentum,
+				sagittis augue sit amet, mollis augue. Suspendisse non ante sit amet
+				quam volutpat feugiat in ac elit. Suspendisse ultrices tortor at massa
+				cursus, quis pretium sapien mollis. Suspendisse massa tellus,
+				pretium vitae rutrum eu, fermentum quis est. Praesent commodo ante quis turpis eleifend,
+				in mattis justo elementum. Nam maximus tellus odio, eget convallis tortor dictum a.
+				Sed ac justo in eros dignissim semper. Sed vel ante erat. Nunc pellentesque nec massa ut euismod.</p>
+			</section>
+		</section>
+		<section class="page-container__main-content">
+			<section class="page-container__main-content__slideshow">
+			</section>
+			<section class="page-container__main-content__services">
+				<h2>Services</h2>
+				<section class="page-container__main-content__services__service1">
+					<h3>Service 1</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim porta ullamcorper.
+					Vestibulum dictum porta ipsum, non ullamcorper enim vehicula quis.
+					Phasellus at euismod felis. Proin sed nulla condimentum,
+					sagittis augue sit amet, mollis augue. Suspendisse non ante sit amet
+					quam volutpat feugiat in ac elit. Suspendisse ultrices tortor at massa
+					cursus, quis pretium sapien mollis. Suspendisse massa tellus,
+					pretium vitae rutrum eu, fermentum quis est. Praesent commodo ante quis turpis eleifend,
+					in mattis justo elementum. Nam maximus tellus odio, eget convallis tortor dictum a.
+					Sed ac justo in eros dignissim semper. Sed vel ante erat. Nunc pellentesque nec massa ut euismod.</p>
+				</section>
+				<section class="page-container__main-content__services__service2">
+					<h3>Service 2</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim porta ullamcorper.
+					Vestibulum dictum porta ipsum, non ullamcorper enim vehicula quis.
+					Phasellus at euismod felis. Proin sed nulla condimentum,
+					sagittis augue sit amet, mollis augue. Suspendisse non ante sit amet
+					quam volutpat feugiat in ac elit. Suspendisse ultrices tortor at massa
+					cursus, quis pretium sapien mollis. Suspendisse massa tellus,
+					pretium vitae rutrum eu, fermentum quis est. Praesent commodo ante quis turpis eleifend,
+					in mattis justo elementum. Nam maximus tellus odio, eget convallis tortor dictum a.
+					Sed ac justo in eros dignissim semper. Sed vel ante erat. Nunc pellentesque nec massa ut euismod.</p>
+				</section>
+				<section class="page-container__main-content__services__service3">
+					<h3>Service 3</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dignissim porta ullamcorper.
+					Vestibulum dictum porta ipsum, non ullamcorper enim vehicula quis.
+					Phasellus at euismod felis. Proin sed nulla condimentum,
+					sagittis augue sit amet, mollis augue. Suspendisse non ante sit amet
+					quam volutpat feugiat in ac elit. Suspendisse ultrices tortor at massa
+					cursus, quis pretium sapien mollis. Suspendisse massa tellus,
+					pretium vitae rutrum eu, fermentum quis est. Praesent commodo ante quis turpis eleifend,
+					in mattis justo elementum. Nam maximus tellus odio, eget convallis tortor dictum a.
+					Sed ac justo in eros dignissim semper. Sed vel ante erat. Nunc pellentesque nec massa ut euismod.</p>
+				</section>
+			</section>
+		</section>
 	</main>
-	<footer>
-		<ul>
-				<li><a href="#">Contact</a></li>
-		</ul>
-	</footer>
+	<footer class="page-footer">
+		<div class="page-footer__about">
+			<a href="#">About</a>
 		</div>
+		<div class="page-footer__copyright">
+			<a href="#">Copyright</a>
+		</div>
+		<div class="page-footer__social">
+			<a href="#">Social</a>
+		</div>
+	</footer>
 </body>
 </html>
