@@ -23,6 +23,7 @@ app.use("/hospital",indexRoutes);
 app.use("/hospitalLogin",indexRoutes);
 app.use("/pharmacy",indexRoutes);
 app.use("/pharmacyLogin",indexRoutes);
+app.use("/medilogIndex",indexRoutes);
 
 app.use("/awa",function(req,res){
     res.render("patient/ppp.ejs");
