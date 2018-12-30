@@ -7,6 +7,31 @@
     <title>Patient</title>
 </head>
 <body>
-    I am patient.and I am doing good.
+    <div class="login-box">
+		<h1>Sign up for Patient Portal</h1>
+		<form action ="/patientsignup" method="POST">
+			<p>Name</p>
+            <input type="text" name="username" required>
+            <p>Age</p>
+            <input type="text" name="age" required>
+            <p>Sex</p>
+            <input type="radio" name="sex" value="male"required>Male
+            <input type="radio" name="sex" value ="female" required>Female
+            <p>Address</p>
+            <input type="text" name="address" required>
+            <p>Contact Number</p>
+            <input type="text" name="phoneNo" required>
+            <p>Email</p>
+            <input type="email" name="email" required>
+            <p>Password</p>
+            <input type="password" name="password" required>
+            <p>Confirm Password</p>
+            <input type="password" name="password2" required>
+
+            
+            <div class="button-holder"><input type="reset" name="reset" value="Reset"></div>
+			<div class="button-holder"><input type="submit" name="submit" value="Sign Up"></div>
+		</form>
+  </div>
 </body>
 </html>

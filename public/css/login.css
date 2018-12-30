@@ -1,9 +1,16 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+}
 body {
 	margin: 0;
 	padding: 0;
 	background-size: cover;
 	background-position: center;
 	font-family: sans-serif;
+	background: #1e71aca2;
 }
 
 .login-box {
@@ -16,12 +23,14 @@ body {
 	position: absolute;
 	transform: translate(-50%,-50%);
 	box-sizing: border-box;
-	padding: 70px 30px;
+	padding: 45px 30px 70px 30px;
+	border-radius:15px;
+	box-shadow:0 0 15px #295c85c9;
 }
 
 h1 {
-	margin: 0;
-	padding: 0 0 20px;
+	margin: 15px 0 25px 0;
+	padding: 0 0 ;
 	text-align: center;
 	font-size: 22px;
 }
@@ -47,20 +56,25 @@ h1 {
 	font-size: 16px;
 }
 
+.button-holder{
+	text-align: center;
+}
+
 .login-box input[type="submit"] {
 	border: none;
 	outline: none;
 	height: 40px;
+	width:90px;
 	background: #1c8adb;
 	color: #fff;
 	font-size: 18px;
 	border-radius: 20px;
+	margin-top: 10px;
 }
 
 .login-box input[type="submit"]:hover {
 	cursor: pointer;
-	background: #39dc79;
-	color: #000;
+	background: #097fd3;
 }
 
 .login-box a {
@@ -69,6 +83,7 @@ h1 {
 	color: #fff;
 }
 
-.login-box a:hover {
-	color: #39dc79;
+.error{
+	color:red;
+	text-align: center;
 }

@@ -1,2 +1,2 @@
 # My-MediLog
-Official repository for our semester project.
+Official repository for our third semester project.
