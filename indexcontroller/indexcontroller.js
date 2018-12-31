@@ -1,5 +1,9 @@
 exports.indexPage = function(req,res){
-    res.render("index.ejs");
+  res.render("index.ejs");
+}
+
+exports.medilogIndex = function(req, res) {
+  res.render("medilogIndex.ejs");
 }
 
 exports.patientLogin = function(req,res){

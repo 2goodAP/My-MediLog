@@ -1,5 +1,5 @@
 function changePage() {
-    window.location="form.html";
+  window.location="views/index.ejs";
 }
 
 let todayDate = new Date();

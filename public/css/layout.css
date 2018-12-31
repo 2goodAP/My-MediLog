@@ -1,6 +1,10 @@
-body { position: relative; }
-body::after {
+body {
+	position: relative;
+}
+body:after {
+	content: "";
 	display: block;
+	clear: both;
 	height: 70px;
 }
 .page-container__news-updates {
@@ -28,7 +32,6 @@ body::after {
 	padding: 1%;
 }
 .page-footer {
-	clear: both;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -39,4 +42,13 @@ body::after {
 }
 .page-footer__social {
 	float: right;
+}
+.page-container__main-content__slideshow {
+	height: 400px;
+}
+.page-container__main-content__services>section {
+	float: left;
+	width: 25%;
+	height: 200px;
+	overflow: hidden;
 }
