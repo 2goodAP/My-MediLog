@@ -1,11 +1,15 @@
 const router = require("express").Router();
 const indexController = require("../indexcontroller/indexcontroller");
+const authenticatePatient = require("../views/patient/authenticatePatient");
 
 router.get("/",indexController.indexPage)
-router.get("/medilogIndex", indexController.medilogIndex);
-router.get("/patientLogin",indexController.patientLogin)
-router.get("/patientSignup",indexController.patientSignup)
-router.get("/patient",indexController.patient)
+router.get("/medilogIndex", indexController.medilogIndex)
+router.get("/patientLogin",indexController.getPatientLogin)
+router.post("/patientLogin",indexController.postPatientLogin)
+router.get("/patientSignup",indexController.getPatientSignup)
+router.post("/patientSignup",indexController.patientSignup)
+
+router.get("/patient",authenticatePatient,indexController.patient)
 router.get("/hospital",indexController.hospital)
 router.get("/hospitalLogin",indexController.hospitalLogin)
 router.get("/pharmacy",indexController.pharmacy)

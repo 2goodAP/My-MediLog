@@ -8,6 +8,7 @@
     <title>Patient SignUp</title>
 </head>
 <body>
+<<<<<<< HEAD
 		<div class="login-box">
 				<h1>SignUp Here!</h1>
 				<form>
@@ -25,5 +26,33 @@
 				</form>
 			</div>
 
+=======
+    <div class="login-box">
+		<h1>Sign up for Patient Portal</h1>
+		<form action ="/patientsignup" method="POST">
+			<p>Name</p>
+            <input type="text" name="username" required>
+            <p>Age</p>
+            <input type="text" name="age" required>
+            <p>Sex</p>
+            <input type="radio" name="sex" value="male"required>Male
+            <input type="radio" name="sex" value ="female" required>Female
+            <p>Address</p>
+            <input type="text" name="address" required>
+            <p>Contact Number</p>
+            <input type="text" name="phoneNo" required>
+            <p>Email</p>
+            <input type="email" name="email" required>
+            <p>Password</p>
+            <input type="password" name="password" required>
+            <p>Confirm Password</p>
+            <input type="password" name="password2" required>
+
+            
+            <div class="button-holder"><input type="reset" name="reset" value="Reset"></div>
+			<div class="button-holder"><input type="submit" name="submit" value="Sign Up"></div>
+		</form>
+  </div>
+>>>>>>> 493719019eb72f5521c5690b3eb2368e3917b582
 </body>
 </html>

@@ -1,12 +1,23 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const mysql = require("mysql");
+const cookieParser = require("cookie-parser");
 const app = express();
+
+pool = mysql.createPool({
+      pool:10,
+      host:"localhost",
+      user:"root",  
+      password:"",
+      database:"medilog"
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended:true
 }));
+app.use(cookieParser());
 
 app.set("view-engine","ejs");
 app.set("views", [path.join(__dirname, "views")],
@@ -28,10 +39,6 @@ app.use("/pharmacyLogin",indexRoutes);
 
 // For linking external static stylesheets and JavaScript files
 app.use(express.static(__dirname + "/public"));
-
-app.use("/awa",function(req,res){
-  res.render("patient/ppp.ejs");
-})
 
 app.listen(3000, ()=> {
   console.log("Server listening at 3000");
