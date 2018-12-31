@@ -10,7 +10,7 @@
 <body>
 	<div class="login-box">
 		<h1>Login To Patient Portal</h1>
-		<form action ="" method="POST">
+		<form action="" method="post" onsubmit="gotoDashboard()">
 			<p>Email</p>
 			<input type="text" name="email" placeholder="Enter Email" required>
 			<p>Password</p>
@@ -20,6 +20,6 @@
 		<div class="error">
 			<%= error%>
 		</div>
-  </div>
+	</div>
 </body>
 </html>
