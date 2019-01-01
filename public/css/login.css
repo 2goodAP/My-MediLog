@@ -14,8 +14,9 @@ body {
 }
 
 .login-box {
+	margin-top: 170px;
 	width: 320px;
-	height: 600px;
+	height: 860px;
 	background: rgba(0, 0, 0, 0.5);
 	color: #fff;
 	top: 50%;
@@ -26,6 +27,10 @@ body {
 	padding: 45px 30px 70px 30px;
 	border-radius:15px;
 	box-shadow:0 0 15px #295c85c9;
+}
+
+.hawa{
+	margin:50px 0;
 }
 
 h1 {
@@ -44,6 +49,13 @@ h1 {
 .login-box input {
 	width: 100%;
 	margin-bottom: 20px;
+}
+.radio-sex {
+	width:50%;
+}
+
+input[type="radio"]{
+	width:10%;
 }
 
 .login-box input[type="text"], input[type="password"] {
