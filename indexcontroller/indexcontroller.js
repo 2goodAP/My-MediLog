@@ -22,16 +22,18 @@ module.exports.postPatientLogin = (req,res)=>{
     if (results.length > 0){
       var userId = results[0].id;
       var hash = md5(Date.now());
+      // res.render('/patient',{print:results});
       res.cookie("userid",userId,{maxAge: 7*86400000});
       res.cookie("hash",hash,{maxAge: 7*86400000});
       pool.query("INSERT INTO sessions (userid, hash) VALUES (?,?)",[userId,hash], (error,results)=>{
         if (error) throw error;
       });
-      res.cookie("name","awan");
+      // res.cookie("name","awan");
       res.redirect("/patient");
     } else{
       res.cookie("error","Login Failed");
       res.redirect("/patientLogin");
+     
     }
   });
 };
