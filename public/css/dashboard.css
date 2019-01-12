@@ -47,6 +47,9 @@ body {
 	text-align: center;
 	line-height: 3.5em;
 }
+.main-sidebar nav {
+	clear: both;
+}
 
 main {
 	float: right;

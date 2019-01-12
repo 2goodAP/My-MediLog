@@ -8,7 +8,7 @@ const app = express();
 pool = mysql.createPool({
       pool:10,
       host:"localhost",
-      user:"root",  
+      user:"root",
       password:"",
       database:"medilog"
 });
@@ -39,6 +39,7 @@ app.use("/pharmacyLogin",indexRoutes);
 
 // For linking external static stylesheets and JavaScript files
 app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/node_modules"));
 
 app.listen(3000, ()=> {
   console.log("Server listening at 3000");
