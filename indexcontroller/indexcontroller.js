@@ -11,7 +11,7 @@ exports.medilogIndex = function(req, res) {
 module.exports.getPatientLogin = (req,res)=>{
   var error = (req.cookies.error) ? req.cookies.error : "";
   res.clearCookie("error");
-  res.render("./patient/login.ejs",{
+  res.render("./login/index.ejs",{
     error: error
   });
 };
@@ -39,26 +39,28 @@ module.exports.postPatientLogin = (req,res)=>{
 };
 
 exports.getPatientSignup = function(req,res){
-  res.render("./patient/signup.ejs");
+  res.render("./signup/patient/index.ejs");
 }
 
 exports.patient = function(req,res){
-  res.render("./patient/patient.ejs");
+  res.render("./patient/dashboard/index.ejs");
 }
 
+exports.dashboard = (req, res) => { res.render("./patient/dashboard/index.ejs"); }
+
 exports.hospitalLogin = function(req,res){
-  res.render("./hospital/login.ejs");
+  res.render("./login/index.ejs");
 }
 exports.hospital = function(req,res){
-  res.render("./hospital/hospital.ejs");
+  res.render("./hospital/index.ejs");
 }
 
 exports.pharmacy = function(req,res){
-  res.render("./pharmacy/pharmacy.ejs");
+  res.render("./pharmacy/index.ejs");
 }
 
 exports.pharmacyLogin = function(req,res){
-  res.render("./pharmacy/login.ejs");
+  res.render("./login/index.ejs");
 }
 
 module.exports.patientSignup = (req,res)=>{
@@ -71,4 +73,4 @@ module.exports.patientSignup = (req,res)=>{
   }
 };
 
-exports.postSignup = (req, res) => { res.render("./patient/post_signup.ejs") };
+exports.postSignup = (req, res) => { res.render("./signup/patient/post_signup.ejs") };
