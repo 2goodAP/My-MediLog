@@ -33,7 +33,7 @@ module.exports.postPatientLogin = (req,res)=>{
     } else{
       res.cookie("error","Login Failed");
       res.redirect("/patientLogin");
-     
+
     }
   });
 };
@@ -70,3 +70,5 @@ module.exports.patientSignup = (req,res)=>{
     });
   }
 };
+
+exports.postSignup = (req, res) => { res.render("./patient/post_signup.ejs") };

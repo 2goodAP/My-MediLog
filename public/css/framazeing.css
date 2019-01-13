@@ -1,5 +1,6 @@
 /* Reset
  * ––––––––––––––––––––––––––––––––––––––––––––––––– */
+*, *:before, *:after { box-sizing: border-box }
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
@@ -13,7 +14,6 @@ time, mark, audio, video {
 
 /* The Grid
  * ––––––––––––––––––––––––––––––––––––––––––––––––– */
-*, *:before, *:after { box-sizing: border-box }
 .container {
 	position: relative;
 	max-width: 1200px;
@@ -52,8 +52,8 @@ time, mark, audio, video {
 	.one-half.column { width: 48%; }
 	.one-third.column { width: 32%; }
 	.two-thirds.column { width: 66%; }
-	.one-forth.column { width: 23.5%; }
-	.three-fouths.column { width: 74.5%; }
+	.one-fourth.column { width: 23.5%; }
+	.three-fourths.column { width: 74.5%; }
 
 	/* Offsets */
 	.offset-one-column { margin-left: 8.5%; }
@@ -71,7 +71,7 @@ time, mark, audio, video {
 
 /* Typography
  * –––––––––––––––––––––––––––––––––––––––––––––––––– */
-body { font-family: Raleway, "HelveticaNeue", Helvetica, Arial, sans-serif; }
+body { font-family: "Raleway", "HelveticaNeue", Helvetica, Arial, sans-serif; }
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
 	margin-bottom: .5em;

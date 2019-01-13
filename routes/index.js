@@ -8,10 +8,10 @@ router.get("/patientLogin",indexController.getPatientLogin)
 router.post("/patientLogin",indexController.postPatientLogin)
 router.get("/patientSignup",indexController.getPatientSignup)
 router.post("/patientSignup",indexController.patientSignup)
+router.get("/postSignup", indexController.postSignup);
 router.get("/dashboard",(req,res)=>{
     res.render("./patient/patient_dashboard.ejs");
 })
-
 router.get("/patient",authenticatePatient,indexController.patient)
 router.get("/hospital",indexController.hospital)
 router.get("/hospitalLogin",indexController.hospitalLogin)
