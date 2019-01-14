@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=display-width, initial-scale=1.0">
-	<title>Welcome back, Patient</title>
+	<title>Your History</title>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 	      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran">
@@ -14,31 +14,30 @@
 	<div class="page-wrapper">
 		<div class="container">
 			<main class="offset-three-columns three-fourths column">
-				<h1 class="row">Welcome back, <span id="username">Insert Username</span></h1>
-				<div class="row">
-					<section class="one-third column blood">
-						<h2 class="heading orange">Blood Test</h2>
-						<p>Insert blood test report here</p>
-					</section>
-					<section class="one-third column pressure">
-						<h2 class="heading orange">Blood Pressure</h2>
-						<p>Insert blood pressure report</p>
-					</section>
-					<section class="one-third column heart">
-						<h2 class="heading orange">Heart Rate</h2>
-						<p>Insert heart rate report</p>
-					</section>
-				</div>
-				<div class="row">
-					<section class="six columns meds">
-						<h2 class="heading orange">Current Medication</h2>
-						<p>Your are taking these medicines.</p>
-					</section>
-					<section class="six columns appointment">
-						<h2 class="heading orange">Next Appointment</h2>
-						<p>You are to meet Dr. Lorem Ipsum next.</p>
-					</section>
-				</div>
+				<h1>Medical History</h1>
+				<p>Your recent reports</p>
+				<section class="row">
+					<h2 class="heading green">Recent History</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Hospital</th>
+								<th>Last Recorded At</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Blood Test</td>
+								<td>Dhulikhel Hospital</td>
+								<td><time>2019-07-05 09:00</time></td>
+								<td><button class="button button-primary"><i class="fa fa-file-pdf-o"></i></button>
+								  <button class="button button-primary"><i class="fa fa-print"></i></button></td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
 			</main>
 			<aside class="main-sidebar one-fourth column">
 				<section class="patient-info">
@@ -50,8 +49,8 @@
 				</section>
 				<nav class="dash-nav">
 					<ul>
-						<li><a href="/dashboard" class="active"><i class="fa fa-th"></i> Dashboard</a></li>
-						<li><a href="/dashHistory"><i class="fa fa-tasks"></i> Medical History</a></li>
+						<li><a href="/dashboard"><i class="fa fa-th"></i> Dashboard</a></li>
+						<li><a href="/dashHistory" class="active"><i class="fa fa-tasks"></i> Medical History</a></li>
 						<li><a href="#"><i class="fa fa-flask"></i>Medicines Taken</a></li>
 					</ul>
 				</nav>
@@ -60,3 +59,4 @@
 	</div>
 </body>
 </html>
+
