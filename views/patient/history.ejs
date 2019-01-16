@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=display-width, initial-scale=1.0">
+	<title>Your History</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+	      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+				crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran">
+	<link rel="stylesheet" href="/css/framazeing.css">
+	<link rel="stylesheet" href="/css/dashboard.css">
 </head>
 <body>
-		<% include includes/navbar.ejs %>
-		<a href="/patient/logout" style="position:absolute; bottom:50px;" >Logout</a>
+	<main class="container">
+		<div class="offset-three-columns three-fourths column">
+			<section class="row top heading">
+				<h1>Medical History</h1>
+				<p>Your recent reports</p>
+			</section>
+			<section class="row">
+				<h2 class="heading green">Recent History</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Hospital</th>
+							<th>Last Recorded At</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Blood Test</td>
+							<td>Dhulikhel Hospital</td>
+							<td><time>2019-07-05 09:00</time></td>
+							<td><button class="button button-primary"><i class="fas fa-file-pdf"></i></button>
+							  <button class="button button-primary"><i class="fa fa-print"></i></button></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</div>
+	</main>
+	<% include includes/navbar.ejs %>
 </body>
 </html>
