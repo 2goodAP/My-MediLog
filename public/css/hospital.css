@@ -24,7 +24,7 @@ nav a {
 	font-weight: 600;
 }
 nav a:hover { text-decoration: none; }
-nav .button { background-color: rgba(131, 208, 242, .7); }
+nav .button { background-color: rgba(131, 208, 242, .5); transition: all 0.6s ease; }
 nav .button:hover { background-color: rgba(131, 208, 242, .8); }
 .login { text-align: center; margin-top: 10px; padding-bottom: 10px; }
 
