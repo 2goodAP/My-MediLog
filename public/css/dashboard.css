@@ -20,17 +20,18 @@ body {
 	margin: .625rem auto;
 	border-radius: 2px;
   color: #a9afbb;
+	transition: all .6s ease-out;
   padding: .625em 1em;
   text-decoration: none;
 }
 .dash-nav a.active {
+  color: white;
   background-color: #00bcd4;
 	box-shadow: 0 5px 10px #aedee3;
-  color: white;
 }
-.dash-nav a:hover:not(.active) {
-  background-color: #f3f3f3;
-	font-weight: normal;
+.dash-nav a:hover:not(.active),
+.dash-nav a:focus:not(.active) {
+  background-color: rgba(243, 243, 243);
 }
 .profile-img {
 	float: left;
@@ -54,31 +55,45 @@ main section {
 	box-shadow: 0 0 10px #dfdfdf;
 	border-radius: 3px;
 	margin-top: 4%;
-	height: 200px;
+	padding: 0 .625em;
 }
+.blood, .pressure, .heart, .meds, .appoint { height: 200px; }
 main h1 {
 	color: #3c4d62;
 	font-size: 2em;
 	margin-top: .625em;
-	 text-align: center;
+	margin-bottom: 0;
+	text-align: center;
 }
-main .heading {
+.heading {
 	position: relative;
 	top: -15px;
 	width: 90%;
-	font-weight: normal;
-	font-size: 1.5rem;
-	color: #fff;
 	box-shadow: 7px 10px 10px #f1e0cc;
 	margin: 0 auto;
-	padding: 1rem .625rem;
+	padding: 1rem 1rem;
 	border-radius: 3px;
 }
-.orange { background-image: linear-gradient(to left, #fb8d02, #ffa625); }
-.green { background-image: linear-gradient(to left, #01adc2, #25c5d9); }
-main .heading + p {
-	padding: .625em;
+.top.heading {
+	position: static;
+	width: auto;
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
 }
+/* .heading, .heading h2 { */
+.heading h2, h2[class~="heading"] {
+	font-weight: normal;
+	font-size: 1.5rem;
+	margin-bottom: .1em;
+	color: #fff;
+}
+.heading p { margin-top: .1em; }
+.orange { background-image: linear-gradient(to left, #fb8d02, #ffa625); }
+.heading.orange p { color: #ffdfc2; }
+.green { background-image: linear-gradient(to left, #01adc2, #25c5d9); }
+.heading.green p { color: #a6e5ec; }
 
 .main-sidebar i[class^="fa"] {
 	vertical-align: middle;

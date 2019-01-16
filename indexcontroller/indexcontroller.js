@@ -47,8 +47,8 @@ exports.patient = function(req,res){
 }
 
 exports.dashboard = (req, res) => { res.render("./patient/dashboard/index.ejs"); }
-
 exports.dashHistory = (req, res) => { res.render("./patient/dashboard/med_history.ejs"); }
+exports.dashMeds = (req, res) => { res.render("./patient/dashboard/medication.ejs"); }
 
 exports.hospitalLogin = function(req,res){
   res.render("./login/index.ejs");
