@@ -46,9 +46,6 @@ body {
 	padding-top: .625em;
 }
 
-.page-wrapper {
-	background-color: #eee;
-}
 main section {
 	position: relative;
 	background-color: #fff;
@@ -108,12 +105,6 @@ i[class^="fa"] { font-size: 1.5em; }
 		left: 0;
 		top: 0;
 		bottom: 0;
-	}
-	.dash-nav ul li:last-child {
-		position: absolute;
-		bottom: .625rem;
-		left: 1%;
-		right: 1%;
 	}
 
 	main h1 { text-align: left; }
