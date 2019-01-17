@@ -15,7 +15,7 @@
 	<main class="container">
 		<div class="offset-three-columns three-fourths column">
 			<section class="row top heading">
-				<h1>Welcome back, <span id="username">Insert Username</span></h1>
+				<h1>Welcome back, <span id="username">	<%= data.patient.name %></span></h1>
 			</section>
 			<div class="row">
 				<section class="one-third column blood">
@@ -41,6 +41,27 @@
 					<p>You are to meet Dr. Lorem Ipsum next.</p>
 				</section>
 			</div>
+			<div class="row">
+				<section class="six columns">
+						<h3>User Profile</h3>
+						Name : <%= data.patient.name %> <br>
+						Patient Id : <%= data.patient.patient_id %> <br>
+						Gender : <%= data.patient.gender %> <br>
+						Age : <%= data.patient.age %> <br>
+						Address : <%= data.patient.address %> <br>
+						Contact No. : <%= data.patient.contact_no %> <br>
+						Citizenship No : <%= data.patient.citizenship_no %> <br>
+						Email : <%= data.patient.email %> <br> <br>
+
+						<h3>Health Status</h3>
+						Blood Group : <%= data.description[0].blood_group%> <br>
+						Allergies : <%= data.description[0].allergies%> <br>
+						Heart Rate : <%= data.description[0].heart_rate%>  Beats per minute<br>
+						Blood Pressure : <%= data.description[0].blood_pressure%> mmHg  <br>
+						Blood Sugar Level : <%= data.description[0].blood_sugar%> mg/dL <br>
+						Cholesterol Level : <%= data.description[0].cholesterol_level%> mg/dL <br> <br>
+				</section>
+			</div>
 		</main>
 	</div>
 	<!-- <% include includes/navbar.ejs %> -->
@@ -49,7 +70,7 @@
 			<img class="profile-img" alt="User profile image"
 			  src="https://img.icons8.com/color/50/000000/circled-user-male-skin-type-6.png">
 			<section class="details">
-				<h2>Patient 1</h2>
+				<h2>	<%= data.patient.name %></h2>
 			</section>
 		</section>
 		<nav class="dash-nav" id="dash-nav">
