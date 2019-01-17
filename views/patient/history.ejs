@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=display-width, initial-scale=1.0">
+	<title>Your History</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+	      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+				crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran">
+	<link rel="stylesheet" href="/css/framazeing.css">
+	<link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+	<main class="container">
+		<div class="offset-three-columns three-fourths column">
+			<section class="row top heading">
+				<h1>Medical History</h1>
+				<p>Your recent reports</p>
+			</section>
+			<section class="row">
+				<h2 class="heading green">Recent History</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Hospital</th>
+							<th>Last Recorded At</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Blood Test</td>
+							<td>Dhulikhel Hospital</td>
+							<td><time>2019-07-05 09:00</time></td>
+							<td><button class="button button-primary"><i class="fas fa-file-pdf"></i></button>
+							  <button class="button button-primary"><i class="fa fa-print"></i></button></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</div>
+	</main>
+	<!-- <% include includes/navbar.ejs %> -->
+	<aside class="main-sidebar one-fourth column">
+		<section class="patient-info">
+			<img class="profile-img" alt="User profile image"
+			  src="https://img.icons8.com/color/50/000000/circled-user-male-skin-type-6.png">
+			<section class="details">
+				<h2>	<%= data.patient.name %></h2>
+			</section>
+		</section>
+		<nav class="dash-nav" id="dash-nav">
+			<ul>
+				<li><a href="/patient" class="nav-link"><i class="fas fa-heartbeat"></i> Dashboard</a></li>
+				<li><a href="/patient/history" class="nav-link active"><i class="fas fa-notes-medical"></i> Medical History</a></li>
+				<li><a href="/patient/labtests" class="nav-link"><i class="fas fa-flask"></i> Lab Tests</a></li>
+				<li><a href="/patient/medication" class="nav-link"><i class="fas fa-pills"></i> Medicines Taken</a></li>
+				<li><a href="/patient/settings" class="nav-link"><i class="fas fa-cogs"></i> Settings</a></li>
+				<li><a href="/patient/logout" class="nav-link"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+			</ul>
+		</nav>
+	</aside>
+</body>
+</html>

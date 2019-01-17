@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Patient Login</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+	      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+				crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran">
+	<link rel="stylesheet" href="/css/framazeing.css">
+	<link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+		<main class="container">
+				<div class="offset-three-columns three-fourths column">
+						<!-- <section class="row top heading">
+							<h1>Username</span></h1>
+						</section>
+						<div class="row">
+							<section class="one-third column blood">
+								<h2 class="heading orange">Blood Test</h2>
+								<p>Insert blood test report here</p>
+							</section>
+							<section class="one-third column pressure">
+								<h2 class="heading orange">Blood Pressure</h2>
+								<p>Insert blood pressure report</p>
+							</section>
+							<section class="one-third column heart">
+								<h2 class="heading orange">Heart Rate</h2>
+								<p>Insert heart rate report</p>
+							</section>
+						</div>
+						<div class="row">
+							<section class="six columns meds">
+								<h2 class="heading orange">Current Medication</h2>
+								<p>Your are taking these medicines.</p>
+							</section>
+							<section class="six columns appoint">
+								<h2 class="heading orange">Next Appointment</h2>
+								<p>You are to meet Dr. Lorem Ipsum next.</p>
+							</section> -->
+							<h4>Update Profile</h4>
+							<form action="/patient/updateProfile" method="POST">
+								<input type="text" name="patientAddress" id="address"  value="<%=data.patient.address 	%>"required> Address <br> <br>
+								<input type="text" name="patientContactNo" id="contact-no"  value="<%=data.patient.contact_no 	%>"required> Contact Number <br> <br>
+								<input type="text" name="patientEmail" id="email"  value="<%=data.patient.email 	%>"required> Email <br> <br>
+								<div class="button-holder"><input type="submit" value="Update Profile"></div>
+							<div>	<%= data.profileupdate %></div> <br>
+						</form>
+
+							<h4>Reset Password</h4>
+							<form action="/patient/resetPassword" method="POST">
+									<input type="password" name="oldPassword" required> Current Password <br>  <br>
+									<input type="password" name="newPassword" required> New Password <br> <br>
+									<input type="submit" value="Reset Password">
+							</form>
+							<%= data.passworderror %> <br>
+							<%= data.passwordchanged %>
+						</div>
+
+
+
+
+					</main>
+		<!-- <% include includes/navbar.ejs %> -->
+
+	<aside class="main-sidebar one-fourth column">
+		<section class="patient-info">
+			<img class="profile-img" alt="User profile image"
+			  src="https://img.icons8.com/color/50/000000/circled-user-male-skin-type-6.png">
+			<section class="details">
+				<h2>	<%= data.patient.name %></h2>
+			</section>
+		</section>
+		<nav class="dash-nav" id="dash-nav">
+			<ul>
+				<li><a href="/patient" class="nav-link"><i class="fas fa-heartbeat"></i> Dashboard</a></li>
+				<li><a href="/patient/history" class="nav-link"><i class="fas fa-notes-medical"></i> Medical History</a></li>
+				<li><a href="/patient/labtests" class="nav-link"><i class="fas fa-flask"></i> Lab Tests</a></li>
+				<li><a href="/patient/medication" class="nav-link"><i class="fas fa-pills"></i> Medicines Taken</a></li>
+				<li><a href="/patient/settings" class="nav-link active"><i class="fas fa-cogs"></i> Settings</a></li>
+				<li><a href="/patient/logout" class="nav-link"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+			</ul>
+		</nav>
+	</aside>
+</body>
+</html>
