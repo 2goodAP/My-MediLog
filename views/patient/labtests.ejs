@@ -13,86 +13,89 @@
 </head>
 <body>
 	<main class="container">
-		<div class="offset-three-columns three-fourths column">
+		<div class="container offset-three-columns three-fourths column">
 			<section class="row top heading">
 				<h1>Medicines</h1>
 				<p>Your medication history</p>
 			</section>
 			<section class="row">
-				<section class="row heading green">
-					<h2>Currently Running Medication</h2>
-					<p>Medicines you are supposed to take without fail</p>
+				<section class="twelve columns">
+					<section class="row heading green">
+						<h2>Currently Running Medication</h2>
+						<p>Medicines you are supposed to take without fail</p>
+					</section>
+					<table>
+						<thead>
+							<tr>
+								<th>Medication</th>
+								<th>About</th>
+								<th>Usage</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Aspirin</td>
+								<td>81 mg per pill</td>
+								<td>
+									<p>Three times a day</p>
+									<p><small>1 pill every six hours</small></p>
+								</td>
+								<!-- <td><button class="button button-primary"><i class="fa fa-file-pdf-o"></i></button> -->
+								<!--	 <button class="button button-primary"><i class="fa fa-print"></i></button></td> -->
+							</tr>
+						</tbody>
+					</table>
 				</section>
-				<table>
-					<thead>
-						<tr>
-							<th>Medication</th>
-							<th>About</th>
-							<th>Usage</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Aspirin</td>
-							<td>81 mg per pill</td>
-							<td>
-								<p>Three times a day</p>
-								<p><small>1 pill every six hours</small></p>
-							</td>
-							<!-- <td><button class="button button-primary"><i class="fa fa-file-pdf-o"></i></button> -->
-							<!--   <button class="button button-primary"><i class="fa fa-print"></i></button></td> -->
-						</tr>
-					</tbody>
-				</table>
 			</section>
 			<section class="row">
-				<section class="row heading orange">
-					<h2>Previously Used Medication</h2>
-					<p>Recently you have been using these medicines</p>
+				<section class="twelve columns">
+					<section class="row heading orange"> <h2>Previously Used Medication</h2>
+						<p>Recently you have been using these medicines</p>
+					</section>
+					<table>
+						<thead>
+							<tr>
+								<th>Medication</th>
+								<th>About</th>
+								<th>Usage</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Aspirin</td>
+								<td>81 mg per pill</td>
+								<td>
+									<p>Three times a day</p>
+									<p><small>1 pill every six hours</small></p>
+								</td>
+								<!-- <td><button class="button button-primary"><i class="fa fa-file-pdf-o"></i></button> -->
+								<!--	 <button class="button button-primary"><i class="fa fa-print"></i></button></td> -->
+							</tr>
+						</tbody>
+					</table>
 				</section>
-				<table>
-					<thead>
-						<tr>
-							<th>Medication</th>
-							<th>About</th>
-							<th>Usage</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Aspirin</td>
-							<td>81 mg per pill</td>
-							<td>
-								<p>Three times a day</p>
-								<p><small>1 pill every six hours</small></p>
-							</td>
-							<!-- <td><button class="button button-primary"><i class="fa fa-file-pdf-o"></i></button> -->
-							<!--   <button class="button button-primary"><i class="fa fa-print"></i></button></td> -->
-						</tr>
-					</tbody>
-				</table>
-			</section>
-			<section>
-				<table>
-					<thead>
-						<tr>
-							<th>Lab Report Name</th>
-							<th>Lab Report Date</th>
-							<th>View</th>
-						</tr>
-					</thead>
-					<tbody>
+				<section>
+					<table>
+						<thead>
+							<tr>
+								<th>Lab Report Name</th>
+								<th>Lab Report Date</th>
+								<th>View</th>
+							</tr>
+						</thead>
+						<tbody>
 							<%for(var i=0;i < data.labtests.length; i++){%>
-								<tbody>
-										<tr>
-											<td><%=data.labtests[i].file_name%></td>
-											<td><%=data.labtests[i].date%></td>
-											<td><%=data.labtests[i].destination%></td>
-										</tr>
-									</tbody>
+							<tbody>
+								<tr>
+									<td><%=data.labtests[i].file_name%></td>
+									<td><%=data.labtests[i].date%></td>
+									<td><%=data.labtests[i].destination%></td>
+								</tr>
+							</tbody>
 							<%}%>
-					</tbody>
-				</table>
+						</tbody>
+					</table>
+				</section>
 			</section>
 		</div>
 	</main>

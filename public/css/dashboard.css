@@ -46,8 +46,8 @@ body {
 	padding-top: .625em;
 }
 
-main section,
-main .row {
+main .row .column,
+main .row .columns {
 	position: relative;
 	background-color: #fff;
 	box-shadow: 0 0 10px #dfdfdf;
