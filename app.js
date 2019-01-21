@@ -4,18 +4,18 @@ const cookieParser = require("cookie-parser");
 const mysql = require("mysql");
 
 pool = mysql.createPool({
-    pool: 10,
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "medilog"    
+  pool: 10,
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "medilog"
 })
 
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-    extended:true
-  }));
+  extended:true
+}));
 app.use(cookieParser());
 
 app.set("view-engine", "ejs");
