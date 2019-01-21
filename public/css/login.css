@@ -10,7 +10,7 @@ body {
 	max-width: 20em;
 	background: rgba(0, 0, 0, 0.5);
 	color: #fff;
-	padding: 45px 30px 70px 30px;
+	padding: 35px 30px 70px 30px;
 	border-radius:15px;
 	box-shadow:0 0 15px #295c85c9;
 }
@@ -58,11 +58,13 @@ body {
 	color: #fff;
 }
 h1 {
-	margin: 15px 0 25px 0;
+	margin: .625em 0 1.5625em 0;
 	padding: 0 0 ;
 	text-align: center;
 	font-size: 22px;
 }
+.login-box label { display: block; }
+form label:first-of-type { margin-top: 2em; }
 form p { margin-top: 20px; }
 
 input[type="radio"] {
