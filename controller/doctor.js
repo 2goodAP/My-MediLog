@@ -1,9 +1,8 @@
 const md5 = require("md5");
-var doctor = {}
+
 module.exports.dashboard = (req,res)=>{
-    res.render("./doctor/index.ejs", {
-      results: []
-    });
+    result = {  searchResults: [] , notFound : ""}
+    res.render("./doctor/index.ejs", result);
 }
 
 module.exports.getDoctorLogin = (req,res)=>{
@@ -67,3 +66,73 @@ module.exports.postDoctorLogout = (req,res)=>{
     res.clearCookie("doctorHash");
     res.redirect("/doctor/login");
 }
+
+module.exports.searchPatient = (req,res)=>{
+  var notFound;
+  pool.query("SELECT * FROM patient WHERE patient_id=?",[req.body.searchId],(error,searchResults)=>{
+    if (error) throw error;
+    if(searchResults.length==0){
+    notFound = "Patient Id Not Found"
+    }
+    result = {searchResults:searchResults,notFound:notFound}
+    res.render("doctor/index.ejs",result);
+  });
+}
+
+module.exports.viewPatient = (req,res)=>{
+  pool.query("SELECT * FROM patient WHERE patient_id=?",[req.params.patient_id],(error,results)=>{
+    if (error) throw error;
+    result = {results:results}
+    res.render("doctor/view_patient.ejs",result);
+  });
+}
+
+module.exports.postViewPatient = (req, res)=>{
+  pool.query("UPDATE patient SET name = ? WHERE patient_id = ?",[req.body.Name,req.params.patient_id],(error,results)=>{
+  res.redirect("/doctor/view_patient/"+req.params.patient_id);
+  })
+}
+
+module.exports.viewHealthStatus = (req,res)=>{
+
+}
+module.exports.viewPatientHistory = (req,res)=>{
+
+}
+module.exports.viewMedication = (req,res)=>{
+
+}
+module.exports.viewLabTests = (req,res)=>{
+
+}
+module.exports.updateHealthStatus = (req,res)=>{
+
+}
+module.exports.addDiagnosis = (req,res)=>{
+
+}
+module.exports.updateLabTests = (req,res)=>{
+
+}
+module.exports.updateMedication = (req,res)=>{
+
+}
+module.exports.addAppointment = (req,res)=>{
+
+}
+module.exports.postUpdateHealthStatus = (req,res)=>{
+
+}
+module.exports.postAddDiagnosis = (req,res)=>{
+
+}
+module.exports.postUpdateLabTests = (req,res)=>{
+
+}
+module.exports.postUpdateMedication = (req,res)=>{
+
+}
+module.exports.postAddAppointment = (req,res)=>{
+
+}
+
