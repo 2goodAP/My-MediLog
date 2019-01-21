@@ -72,6 +72,62 @@
 					</tbody>
 				</table>
 			</section>
+			<section>
+					<h4>Current Medications</h4>
+						<%for(var i=0;i < data.medications.length;i++ ){%>
+							<%if(!data.medications[i].dose_completed){%>
+										<table>
+											<thead>
+												<tr>
+													<th>Medicine Name</th>
+													<th>Amount</th>
+													<th>Dose</th>
+													<th>Prescribed By</th>
+													<th>Prescribed Date</th>
+													<th>Prescribed For Days</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><%=data.medications[i].medicine_name%></td>
+													<td><%=data.medications[i].amount%></td>
+													<td><%=data.medications[i].dose%></td>
+													<td><%=data.medications[i].prescribed_by%></td>
+													<td><%=data.medications[i].prescribed_date%></td>
+													<td><%=data.medications[i].prescribed_for%></td>
+												</tr>
+											</tbody>
+										</table>
+							<%}%>
+							<%}%>
+							<h4>Past Medications</h4>
+							<%for(var i=0;i < data.medications.length;i++ ){%>
+							<%if(data.medications[i].dose_completed){%>
+										<table>
+											<thead>
+												<tr>
+													<th>Medicine Name</th>
+													<th>Amount</th>
+													<th>Dose</th>
+													<th>Prescribed By</th>
+													<th>Prescribed Date</th>
+													<th>Prescribed For Days</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><%=data.medications[i].medicine_name%></td>
+													<td><%=data.medications[i].amount%></td>
+													<td><%=data.medications[i].dose%></td>
+													<td><%=data.medications[i].prescribed_by%></td>
+													<td><%=data.medications[i].prescribed_date%></td>
+													<td><%=data.medications[i].prescribed_for%></td>
+												</tr>
+											</tbody>
+										</table>
+							<%}%>
+						<%}%>
+				</section>
 		</div>
 	</main>
 	<!-- <% include includes/navbar.ejs %> -->

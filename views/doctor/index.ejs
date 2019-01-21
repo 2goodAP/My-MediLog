@@ -7,8 +7,20 @@
     <title>Doctor</title>
 </head>
 <body>
-    <h2>Doctor Portal</h2>
-   
+		<h2>Doctor Portal</h2>
+		<form action="/doctor/search" method="POST">
+			<input type="text" name="searchId"> Patient Id <br>
+			<input type="submit">
+		</form>
+		<div id="searchResults">
+			<% if (results.length > 0){ %>
+				<br>
+			<a href="/doctor/view_patient/<%= results[0].patient_id %>"><%=results[0].name%></a>
+			<% } else {%>
+				<br>
+				<span>Patient Id Not Found</span>
+				<%}%>
+		</div>
     <a href="/doctor/logout" style="position:absolute; bottom:50px;" >Logout</a>
 </body>
 </html>

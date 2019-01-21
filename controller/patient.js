@@ -4,7 +4,7 @@ module.exports.index = (req,res)=>{
     pool.query("SELECT * FROM patient WHERE patient_id =? ",[req.cookies.patientId],(error,results)=>{
         if(error) throw error;
         pool.query('SELECT * FROM disease WHERE patient_id = ?', [req.cookies.patientId], (error, diseaseResults) => {
-          data = { patient : results[0], diseaseResults}
+          data = { patient : results[0] , diseaseResults}
           res.render("./patient/index .ejs",data);
         });
     })
@@ -76,20 +76,43 @@ module.exports.dashboard = (req,res) =>{
   pool.query("SELECT * FROM patient WHERE patient_id = ?",[req.cookies.patientId],(error,patientinfo)=>{
     if(error) throw error;
     pool.query("SELECT * FROM description WHERE patient_id=?",[req.cookies.patientId],(error,description)=>{
-      data = {patient : patientinfo[0], description}
+      data = {patient : patientinfo[0]|| [], description : description|| []}
       res.render("./patient/dashboard.ejs",data);
     })
   })
 
 }
 module.exports.patienthistory = (req,res) =>{
-  res.render("./patient/history.ejs");
+  pool.query("SELECT * FROM patient WHERE patient_id = ?",[req.cookies.patientId],(error,patientinfo)=>{
+    if(error) throw error;
+    pool.query("SELECT * FROM diagnosis WHERE patient_id=?",[req.cookies.patientId],(error,diagnosis)=>{
+      data = {patient : patientinfo[0]|| [], diagnosis : diagnosis|| []}
+      res.render("./patient/history.ejs",data);
+    })
+  })
+  // By join
+  // pool.query("SELECT * FROM patient JOIN diagnosis ON patient.patient_id = diagnosis.patient_id AND patient.patient_id = 11",[req.cookies.patientId],(error,patient)=>{
+  //   data = { patient : patient || []}
+  //   res.render("./patient/history.ejs",data);
+  // })
 }
 module.exports.labtests = (req,res) =>{
-  res.render("./patient/labtests.ejs");
+  pool.query("SELECT * FROM patient WHERE patient_id = ?",[req.cookies.patientId],(error,patientinfo)=>{
+    if(error) throw error;
+    pool.query("SELECT * FROM labtests WHERE patient_id=?",[req.cookies.patientId],(error,labtests)=>{
+      data = {patient : patientinfo[0]|| [], labtests : labtests|| []}
+      res.render("./patient/labtests.ejs",data);
+    })
+  })
 }
 module.exports.medication = (req,res) =>{
-  res.render("./patient/medication.ejs");
+  pool.query("SELECT * FROM patient WHERE patient_id = ?",[req.cookies.patientId],(error,patientinfo)=>{
+    if(error) throw error;
+    pool.query("SELECT * FROM medications WHERE patient_id=?",[req.cookies.patientId],(error,medications)=>{
+      data = {patient : patientinfo[0]|| [], medications : medications|| []}
+      res.render("./patient/medication.ejs",data);
+    })
+  })
 }
 module.exports.settings = (req,res) =>{
   var profileupdate = (req.cookies.updateProfileSuccess) ? req.cookies.updateProfileSuccess : "";

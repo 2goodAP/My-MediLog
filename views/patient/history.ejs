@@ -40,6 +40,32 @@
 					</tbody>
 				</table>
 			</section>
+
+				<section class="nine columns">
+						<table>
+								<thead>
+									<tr>
+										<th>Disease or Problem</th>
+										<th>Description</th>
+										<th>Date</th>
+										<th>Doctor's Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<%for(var i=0;i < data.diagnosis.length; i++){%>
+										<tbody>
+												<tr>
+													<td><%=data.diagnosis[i].disease_problem%></td>
+													<td><%=data.diagnosis[i].description%></td>
+													<td><%=data.diagnosis[i].date%></td>
+													<td><%=data.diagnosis[i].doctor_name%></td>
+												</tr>
+											</tbody>
+									<%}%>
+								</tbody>
+							</table>
+				</section>
+			</div>
 		</div>
 	</main>
 	<!-- <% include includes/navbar.ejs %> -->

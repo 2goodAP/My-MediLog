@@ -1,7 +1,9 @@
 const md5 = require("md5");
 var doctor = {}
 module.exports.dashboard = (req,res)=>{
-    res.render("./doctor/index.ejs");
+    res.render("./doctor/index.ejs", {
+      results: []
+    });
 }
 
 module.exports.getDoctorLogin = (req,res)=>{
@@ -23,7 +25,7 @@ module.exports.postDoctorLogin = (req,res)=>{
             pool.query("INSERT INTO sessions (doctor_id, hash) VALUES (?,?)",[doctorId, hash],(error,results)=>{
                 if(error) throw error;
             });
-            
+
             // Redirect
             res.redirect("/doctor");
         }
@@ -31,7 +33,7 @@ module.exports.postDoctorLogin = (req,res)=>{
             // Redirect
             res.cookie("error","Login Failed");
             res.redirect("/doctor/login");
-           
+
         }
     });
 }

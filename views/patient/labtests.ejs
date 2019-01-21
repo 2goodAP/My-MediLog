@@ -72,6 +72,28 @@
 					</tbody>
 				</table>
 			</section>
+			<section>
+				<table>
+					<thead>
+						<tr>
+							<th>Lab Report Name</th>
+							<th>Lab Report Date</th>
+							<th>View</th>
+						</tr>
+					</thead>
+					<tbody>
+							<%for(var i=0;i < data.labtests.length; i++){%>
+								<tbody>
+										<tr>
+											<td><%=data.labtests[i].file_name%></td>
+											<td><%=data.labtests[i].date%></td>
+											<td><%=data.labtests[i].destination%></td>
+										</tr>
+									</tbody>
+							<%}%>
+					</tbody>
+				</table>
+			</section>
 		</div>
 	</main>
 	<!-- <% include includes/navbar.ejs %> -->
